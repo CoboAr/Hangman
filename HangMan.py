@@ -16,7 +16,7 @@ class HangMan:
         self.user_text = ""
         self.random_word = RandomWord ().random_words ()[0]
         self.letters = [0 for _ in range(len(self.random_word))]
-        print(self.random_word)
+        print(f"The random word to guess is: {self.random_word}")
         self.wrong = ""
         self.user_tex=""
         self.flag = False
@@ -54,22 +54,22 @@ class HangMan:
             index += 1
 
     def draw_leg_one(self):
-        pygame.draw.line (self.screen, Color ('red'), (200, 300), (150, 350), 10)
+        pygame.draw.line (self.screen, Color ('red'), (155, 305), (105, 355), 10)
 
     def draw_leg_two(self):
-        pygame.draw.line (self.screen, Color ('red'), (200, 300), (250, 350), 10)
+        pygame.draw.line (self.screen, Color ('red'), (155, 305), (205, 355), 10)
 
     def draw_arm_one(self):
-        pygame.draw.line (self.screen, Color ('red'), (150, 250), (200, 250), 10)
+        pygame.draw.line (self.screen, Color ('red'), (105, 255), (155, 255), 10)
 
     def draw_arm_two(self):
-        pygame.draw.line (self.screen, Color ('red'), (200, 250), (250, 250), 10)
+        pygame.draw.line (self.screen, Color ('red'), (155, 255), (205, 255), 10)
 
     def draw_body(self):
-        pygame.draw.line (self.screen, Color ('red'), (200, 200), (200, 300), 10)
+        pygame.draw.line (self.screen, Color ('red'), (155, 205), (155, 305), 10)
 
     def draw_head(self):
-        pygame.draw.circle (self.screen, Color ('red'), (200, 200), 10, 10)
+        pygame.draw.circle (self.screen, Color ('red'), (155, 205), 10, 10)
 
     def draw_hangman(self):
         self.draw_gallows ()
